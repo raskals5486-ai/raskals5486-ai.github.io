@@ -1,0 +1,10 @@
+{
+  "version_code": 2,
+  "version_name": "0.2.0",
+  "channel": "pilot",
+  "minimum_android": 8,
+  "abi": "arm64-v8a",
+  "sha256": "1BEB7C6D2928FFE512A56D375507DC47C2193059E76DFC023972A54465AF2903",
+  "download_url": "https://github.com/raskals5486-ai/raskals5486-ai.github.io/releases/download/v0.2.0/Taxi-Demand-Radar-SPB-0.2.0-offline-debug.apk",
+  "release_url": "https://github.com/raskals5486-ai/raskals5486-ai.github.io/releases/tag/v0.2.0"
+}
