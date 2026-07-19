@@ -1,0 +1,1 @@
+{"id":"pilot-spb_center","zone_id":"spb_center","forecast_for":"2026-07-19T18:00:00+03:00","horizon_minutes":30,"demand_score":28,"demand_level":"NORMAL","confidence":0.25,"model_version":"pilot-no-live-data-v1","data_freshness_seconds":0,"factors":[{"factor":"time_profile","impact":0,"description":"Базовый временной профиль без данных агрегатора такси"}]}

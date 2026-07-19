@@ -1,0 +1,10 @@
+[
+  {"id":"spb_pulkovo","name":"Пулково","district":"Московский","center_lat":59.8003,"center_lon":30.2625,"priority":3,"zone_type":"airport","geometry":{}},
+  {"id":"spb_vostaniya","name":"Московский вокзал","district":"Центральный","center_lat":59.9317,"center_lon":30.3607,"priority":3,"zone_type":"transport","geometry":{}},
+  {"id":"spb_ladozhsky","name":"Ладожский вокзал","district":"Красногвардейский","center_lat":59.9318,"center_lon":30.4406,"priority":3,"zone_type":"transport","geometry":{}},
+  {"id":"spb_center","name":"Центр — Невский","district":"Центральный","center_lat":59.9343,"center_lon":30.3351,"priority":3,"zone_type":"mixed","geometry":{}},
+  {"id":"spb_krestovsky","name":"Крестовский остров","district":"Петроградский","center_lat":59.9722,"center_lon":30.2208,"priority":3,"zone_type":"event","geometry":{}},
+  {"id":"spb_sevkabel","name":"Севкабель Порт","district":"Василеостровский","center_lat":59.9241,"center_lon":30.2416,"priority":3,"zone_type":"event","geometry":{}},
+  {"id":"spb_ska","name":"СКА Арена","district":"Московский","center_lat":59.8689,"center_lon":30.3495,"priority":3,"zone_type":"event","geometry":{}},
+  {"id":"spb_lakhta","name":"Лахта","district":"Приморский","center_lat":59.987,"center_lon":30.1778,"priority":1,"zone_type":"business","geometry":{}}
+]
