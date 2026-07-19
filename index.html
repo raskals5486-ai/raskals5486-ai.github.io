@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Taxi Demand Radar SPB — информационный сервис оценки потенциальной транспортной нагрузки в Санкт-Петербурге.">
+  <meta name="theme-color" content="#09111f">
+  <title>Taxi Demand Radar SPB — транспортная аналитика Санкт-Петербурга</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Taxi Demand Radar SPB — наверх">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span><b>Demand Radar</b><small>Saint Petersburg</small></span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="#product">Проект</a>
+      <a href="#integration">API</a>
+      <a href="#privacy">Данные</a>
+      <a class="nav-cta" href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> Пилотный проект • Санкт-Петербург</div>
+        <h1>Понимать транспортную нагрузку <em>до её пика</em></h1>
+        <p class="hero-lead">Taxi Demand Radar SPB объединяет разрешённые данные о транспортных узлах, погоде и городской обстановке, чтобы показывать водителям такси понятный прогноз потенциального спроса.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#integration">Как используется API</a>
+          <a class="button button-secondary" href="#contacts">О заявителе</a>
+        </div>
+        <div class="hero-note">Независимый информационный продукт. Не является сервисом заказа такси и не взаимодействует с Яндекс Про.</div>
+      </div>
+
+      <div class="radar-card" aria-label="Демонстрационный экран прогноза">
+        <div class="radar-top"><span>Транспортные узлы</span><span class="live"><i></i> DEMO</span></div>
+        <div class="radar-visual">
+          <span class="ring ring-one"></span><span class="ring ring-two"></span><span class="ring ring-three"></span>
+          <span class="sweep"></span><span class="point p1"></span><span class="point p2"></span><span class="point p3"></span>
+          <div class="radar-score"><strong>72</strong><small>из 100</small></div>
+        </div>
+        <div class="signal-list">
+          <div><span class="signal-icon airport">✦</span><p><b>Пулково</b><small>ближайшие прилёты</small></p><strong>выше среднего</strong></div>
+          <div><span class="signal-icon station">◆</span><p><b>Московский вокзал</b><small>скоростные поезда</small></p><strong>умеренно</strong></div>
+          <div><span class="signal-icon station">◆</span><p><b>Ладожский вокзал</b><small>дальние поезда</small></p><strong>умеренно</strong></div>
+        </div>
+        <p class="demo-caption">Иллюстрация интерфейса. Значения не являются фактическими данными.</p>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Ключевые принципы">
+      <div><b>Официальные источники</b><span>Только разрешённые API и договорные выгрузки</span></div>
+      <div><b>Понятный результат</b><span>Прогноз 0–100, уверенность и объяснение факторов</span></div>
+      <div><b>Без персональных данных</b><span>Никаких сведений о пассажирах и заказах</span></div>
+    </section>
+
+    <section class="section" id="product">
+      <div class="section-heading">
+        <span class="section-number">01</span>
+        <div><p class="kicker">О продукте</p><h2>Один экран для оценки городской ситуации</h2></div>
+      </div>
+      <div class="feature-grid">
+        <article><span>15 / 30 / 60</span><h3>Временные окна</h3><p>Оценка вероятного изменения транспортной нагрузки в ближайшие 15, 30 и 60 минут.</p></article>
+        <article><span>3 узла</span><h3>Пулково и вокзалы</h3><p>Планируемые модули аэропорта Пулково, Московского и Ладожского вокзалов.</p></article>
+        <article><span>0–100</span><h3>Объяснимый индекс</h3><p>Итог сопровождается уровнем уверенности, свежестью источников и перечнем факторов.</p></article>
+      </div>
+      <div class="product-copy">
+        <div>
+          <h3>Для кого</h3>
+          <p>Для водителей такси в Санкт-Петербурге, которым нужен компактный информационный ориентир при планировании рабочего времени и перемещений по городу.</p>
+        </div>
+        <div>
+          <h3>Чего сервис не делает</h3>
+          <p>Не принимает заказы, не гарантирует доход или повышающий коэффициент, не управляет приложениями агрегаторов и не получает данные из Яндекс Про.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="integration">
+      <div class="section-heading">
+        <span class="section-number">02</span>
+        <div><p class="kicker">Планируемая интеграция</p><h2>Официальный API Яндекс Go</h2></div>
+      </div>
+      <div class="integration-layout">
+        <div class="flow" aria-label="Схема обработки данных">
+          <div><small>01</small><b>Контрольные маршруты</b><span>Точки отправления и назначения в Санкт-Петербурге</span></div>
+          <i>→</i>
+          <div><small>02</small><b>Trip Info API</b><span>Примерная цена, время подачи, длительность и расстояние</span></div>
+          <i>→</i>
+          <div><small>03</small><b>Публичный интерфейс</b><span>Отображение пользователю и агрегированный индикатор</span></div>
+        </div>
+        <div class="integration-copy">
+          <p>Для проекта запрашиваются <code>clid</code> и <code>API key</code> к API информации о поездке. Планируется серверное получение данных по заранее определённым маршрутам от транспортных узлов Санкт-Петербурга.</p>
+          <ul>
+            <li>показ ориентировочной стоимости и времени поездки конечному пользователю;</li>
+            <li>тарифы «Эконом», «Комфорт» и «Комфорт+» — в пределах доступности API;</li>
+            <li>ключ хранится только на backend и не включается в APK;</li>
+            <li>частота запросов и хранение истории — только в согласованных Яндексом пределах;</li>
+            <li>никакого сравнения с конкурентами и автоматического заказа поездок.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="price-widget">
+        <div class="widget-route">
+          <span class="route-dot start"></span><p><small>Откуда</small><b>Аэропорт Пулково</b></p>
+          <span class="route-line"></span>
+          <span class="route-dot end"></span><p><small>Куда</small><b>Центр Санкт-Петербурга</b></p>
+        </div>
+        <div class="widget-result"><small>Примерная стоимость</small><strong>после подключения API</strong><span>Время подачи — после подключения</span></div>
+        <p>Примерная стоимость поездки по указанному маршруту по тарифу «Эконом». Цена может отличаться в связи со спросом и наличием свободных такси. Подробнее на <a href="https://taxi.yandex.ru/" rel="noopener noreferrer">taxi.yandex.ru</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="privacy">
+      <div class="section-heading">
+        <span class="section-number">03</span>
+        <div><p class="kicker">Ответственная разработка</p><h2>Данные, безопасность и прозрачность</h2></div>
+      </div>
+      <div class="policy-grid">
+        <article><span>01</span><h3>Минимизация данных</h3><p>Не запрашиваются ФИО, телефоны, маршруты конкретных пассажиров, сведения о заказах, оплате или водителях.</p></article>
+        <article><span>02</span><h3>Защита ключа</h3><p>Ключи внешних API размещаются в серверном хранилище секретов. Мобильное приложение получает только подготовленный ответ backend.</p></article>
+        <article><span>03</span><h3>Разрешение источника</h3><p>Любой live-источник включается только после проверки условий и получения необходимого разрешения или договора.</p></article>
+        <article><span>04</span><h3>Честная маркировка</h3><p>При отсутствии свежих данных интерфейс показывает «Нет данных», а не подменяет это низким уровнем спроса.</p></article>
+      </div>
+      <a class="text-link" href="privacy.html">Политика обработки данных и конфиденциальности <span>→</span></a>
+    </section>
+
+    <section class="section contact-section" id="contacts">
+      <div class="contact-card">
+        <div>
+          <p class="kicker">Заявитель и разработчик</p>
+          <h2>ИП Беккер<br>Владислав Викторович</h2>
+          <p>Проект находится на стадии пилотной разработки и запроса официальных доступов к источникам данных.</p>
+        </div>
+        <dl>
+          <div><dt>ИНН</dt><dd>780636190710</dd></div>
+          <div><dt>ОГРНИП</dt><dd>324784700129533</dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+79062298166">+7 (906) 229-81-66</a></dd></div>
+          <div><dt>Email</dt><dd><a href="mailto:Raskals5486@yandex.ru">Raskals5486@yandex.ru</a></dd></div>
+          <div><dt>Регион</dt><dd>Санкт-Петербург, Россия</dd></div>
+        </dl>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand footer-brand"><span class="brand-mark"><span></span><span></span><span></span></span><span><b>Demand Radar</b><small>Saint Petersburg</small></span></div>
+    <p>© <span id="year">2026</span> ИП Беккер В.В. • Информационно-аналитический проект</p>
+    <div><a href="privacy.html">Конфиденциальность</a><a href="mailto:Raskals5486@yandex.ru">Связаться</a></div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
